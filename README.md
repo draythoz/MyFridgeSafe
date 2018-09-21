@@ -1,6 +1,10 @@
-# CloudFirestoreTest
+# MyFridgeSafe
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+
+##Description
+
+This is an angular frontend for interacting with the MyFridgeSafe project
 
 ## Development server
 
