@@ -1,5 +1,5 @@
 {
-  "name": "cloud-firestore-test",
+  "name": "MyFridgeSafe",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
