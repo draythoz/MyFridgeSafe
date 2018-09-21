@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyDCCNTbfICaPO1Njn9Mbafto6dIixvoslo",
-   authDomain: "flutterexample-fb44c.firebaseapp.com",
-   databaseURL: "https://flutterexample-fb44c.firebaseio.com",
-   projectId: "flutterexample-fb44c",
-   storageBucket: "flutterexample-fb44c.appspot.com",
-   messagingSenderId: "480325678575"
+    apiKey: "AIzaSyAH_ITLSAVli93Dw3Q2-olFLk4_y6tDG3k",
+    authDomain: "myfridgesafe-261a5.firebaseapp.com",
+    databaseURL: "https://myfridgesafe-261a5.firebaseio.com",
+    projectId: "myfridgesafe-261a5",
+    storageBucket: "myfridgesafe-261a5.appspot.com",
+    messagingSenderId: "468807983637"
   }
 };
 
