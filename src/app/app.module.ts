@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
@@ -16,9 +16,9 @@ import { FridgeSafeReadComponent } from './fridge-safe-read/fridge-safe-read.com
     imports: [
         BrowserModule,
         AngularFireModule.initializeApp(environment.firebase),
-        AngularFireDatabaseModule
+        AngularFirestoreModule
     ],
-    providers: [AngularFireDatabase],
+    providers: [AngularFirestore],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

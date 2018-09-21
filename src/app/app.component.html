@@ -1,4 +1,3 @@
-<!-- <span ng-model="locked">{{ope}}</span> -->
 <div id="loginScreen">
     <p>
         Welcome!  Please Login to Your Fridge Safe Account!
@@ -13,16 +12,17 @@
         <button onclick="document.getElementById('loginScreen').classList.add('hide'); document.getElementById('managementScreen').classList.remove('hide');" >Login</button>
       </div>
 </div>
-<div id="managementScreen" class="hide">
+<div id="managementScreen" *ngIf="safes" class="hide">
   <ul>
-    <li *ngFor="let fridge of (fridgeSafe$ | async)">
+    <li *ngFor="let safe of (safes | async)">
       <div>
-      Locked: {{ !fridge.open  }}
+      Locked: {{ !safe.Open  }}
       </div>
-      <div>Last Update: {{ fridge.timeStamp}}</div>
+      <div *ngIf="safe.TimeStamp">Last Update: {{ safe.TimeStamp.toDate() }}</div>
+      <div>Is Demo: {{ safe.IsDemo }}</div>
       <div>
-        <button [ngClass]="{'unlocked': fridge.open, 'locked': !fridge.open}" 
-          (click)="toggleLock(fridge)">{{fridge.open === false ? "Unlock Fridge" : "Lock Fridge" }}
+        <button [ngClass]="{'unlocked': safe.Open, 'locked': !safe.Open}" 
+          (click)="toggleLock(safe)">{{safe.Open === false ? "Unlock Fridge" : "Lock Fridge" }}
       </button> 
       </div>
     </li>
