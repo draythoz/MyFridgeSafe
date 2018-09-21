@@ -1,0 +1,18 @@
+button{
+    background-color: lime;
+    padding: 5px 10px;
+}
+
+.locked{
+    background-color: pink;
+}
+
+.hide
+{
+    display: none;
+}
+
+input[type=text], input[type=password]
+{
+    margin: 10px;
+}

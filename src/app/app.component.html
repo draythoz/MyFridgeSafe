@@ -1,0 +1,30 @@
+<!-- <span ng-model="locked">{{ope}}</span> -->
+<div id="loginScreen">
+    <p>
+        Welcome!  Please Login to Your Fridge Safe Account!
+      </p>
+      <div>
+        <span>Username :</span><input type="text" id="Username" name="Username" />
+      </div>
+      <div>
+        <span>Password :</span><input type="password" id="Password" name="Password" />
+      </div>
+      <div>
+        <button onclick="document.getElementById('loginScreen').classList.add('hide'); document.getElementById('managementScreen').classList.remove('hide');" >Login</button>
+      </div>
+</div>
+<div id="managementScreen" class="hide">
+  <ul>
+    <li *ngFor="let fridge of (fridgeSafe$ | async)">
+      <div>
+      Locked: {{ !fridge.open  }}
+      </div>
+      <div>Last Update: {{ fridge.timeStamp}}</div>
+      <div>
+        <button [ngClass]="{'unlocked': fridge.open, 'locked': !fridge.open}" 
+          (click)="toggleLock(fridge)">{{fridge.open === false ? "Unlock Fridge" : "Lock Fridge" }}
+      </button> 
+      </div>
+    </li>
+  </ul>
+</div>
